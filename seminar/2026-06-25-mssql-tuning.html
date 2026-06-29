@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>2026 AI 활용 MS SQL Server Tuning 기술 세미나 결과보고</title></head>
+<body style="font-family:-apple-system,sans-serif;max-width:680px;margin:0 auto;padding:24px;line-height:1.6;color:#333;font-size:14px;background:#fff">
+<h2 style="margin:0 0 4px">2026 AI 활용 MS SQL Server Tuning 기술 세미나</h2>
+<blockquote style="border-left:4px solid #1a73e8;padding:8px 12px;margin:4px 0 12px;background:#f8f9fa;font-size:14px">2026-06-25 (목) · 발표: DB성능마스터팀 김성식 이사 · 이병찬 컨설턴트 · 결과보고: 브랜드마케팅팀 임수현</blockquote>
+<p style="margin:4px 0 12px;font-size:13px;color:#555">2026년도 두 번째 기술 세미나. 'AI 활용'을 전면에 내세운 첫 세미나로, 신간 『GitHub Copilot Chat과 함께하는 SQL 튜닝 가이드』와 연계해 기획. 만족도 응답자 전원이 7점 이상(평균 8.47점)을 부여했고, 참석자가 인식하는 IT 운영 과제와 AI 기능 수요가 exemONE·AI Tuner 기능과 높은 연계성을 보였다.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>1. 주요 성과 요약</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">항목</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">수치</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">비고</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">사전 신청자</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">63명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">참석 확정 45 · 미응답 13 · 참석 불가 5</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실제 참석자</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>45명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">참석률 77.6% (참석 불가 5 제외 58명 기준)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">만족도 응답</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">34명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">응답률 75.6%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">평균 만족도</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>8.47점</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">10점 만점</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">NPS 지수</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>44.1</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">응답자 전원 7점 이상 · B2B 평균 20~30 대비 높음</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#1a73e8"><strong>후속 요청 고객</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right;color:#1a73e8"><strong>14명 (41.2%)</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">exemONE·eXemble 자료/데모/컨설팅 요청</td></tr>
+</table>
+<p style="margin:4px 0;font-size:12px;color:#999">※ NPS: 추천 의향(0~10점)으로 고객 충성도를 보는 지표. 적극 추천(9~10) 비율에서 비추천(0~6) 비율을 뺀 값.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>1-b. 시리즈 추세 (3월 → 6월)</strong>
+<p style="margin:4px 0;font-size:13px;color:#555">2026 상반기 기술 세미나 2회차 비교. AI를 전면에 내세운 이번 회차에서 NPS와 AI 활용 의향이 모두 상승했다.</p>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">지표</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">3월 Oracle</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">6월 MS SQL</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">추세</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실제 참석자</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">64명 (81%)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">45명 (78%)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#888">유사</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">평균 만족도</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">8.64점</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">8.47점</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#c0392b">▼ 0.17</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px"><strong>NPS</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">43.5</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>44.1</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#1a73e8">▲ 0.6</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">AI 활용 의향 (적극+참고)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">98.3%</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>100%</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#1a73e8">▲</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">후속 요청률</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">45.9% (28명)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">41.2% (14명)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#c0392b">▼</td></tr>
+</table>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">만족도·후속 요청률은 소폭 하락했으나 모두 높은 수준을 유지. NPS와 AI 활용 의향은 상승해, 'AI 활용' 콘셉트가 충성도·관심도 측면에서 유효했음을 시사.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>2. 응답자 프로필 (만족도 응답 34명)</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">구분</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">분포</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">직책</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">시니어 실무자 55.9%(19) > 주니어 실무자 38.2%(13) > 관리자 5.9%(2)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">산업군</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">IT/소프트웨어 47.1%(16) > 금융 23.5%(8) > 기타 20.6%(7) > 제조 5.9%(2)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">주요 업무 영역(복수)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">DBA/DB 운영 85.3%(29) > IT 인프라 운영 35.3%(12) > 시스템·백엔드 개발 14.7%(5)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">SQL 튜닝 경험</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실무 경험 있음 44.1%(15) > 기본 개념 보유 41.2%(14) > 튜닝 주담당 8.8%(3) > 처음 5.9%(2)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">주력 운영 DB</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">Oracle 44.1%(15) > MS SQL Server 29.4%(10) > MySQL 14.7%(5) > PostgreSQL 5.9%(2)</td></tr>
+</table>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">참석자 약 90%가 DBA·DB 운영 직무, 80% 이상이 실무 경험·기본 개념 보유 단계. '실전 사례 기반 튜닝 노하우' 니즈가 높은 핵심 운영층 중심.</p>
+<p style="margin:4px 0;padding:8px 12px;background:#fff3e0;border-radius:4px;font-size:13px"><strong>주목:</strong> MS SQL Server 주제임에도 주력 DB가 Oracle인 운영사(44.1%)가 가장 많이 참석. 단일 DB가 아닌 멀티 DB 환경 운영자가 'AI 튜닝'이라는 공통 관심사로 유입된 것으로, exemONE의 멀티 DB 통합 관제 메시지로 연결 가능.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>3. IT 운영 환경 &amp; 과제</strong>
+<p style="margin:4px 0;font-size:13px"><strong>인프라 환경(복수):</strong> 온프레미스 중심 52.9%(18) > 하이브리드 38.2%(13) > 클라우드 전환 계획 8.8%(3)</p>
+<p style="margin:8px 0 4px;font-size:13px"><strong>주요 운영 과제(복수):</strong></p>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">장애 감지 및 원인 파악 — <strong>61.8%</strong>(21명)</li>
+<li style="margin:4px 0">성능 저하 및 병목 현상 개선 — <strong>61.8%</strong>(21명)</li>
+<li style="margin:4px 0">통합 모니터링 환경 구축 — <strong>44.1%</strong>(15명)</li>
+<li style="margin:4px 0">AI·자동화 도입 — <strong>38.2%</strong>(13명)</li>
+</ul>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">상위 과제 모두 exemONE 핵심 기능과 직접 연계.</p>
+<p style="margin:8px 0;font-size:13px"><strong>성능 이슈 원인 파악 소요 시간:</strong> 전체의 79.4%가 30분 이상 소요<br>
+<span style="color:#666">30분~1시간 50.0%(17) > 1~3시간 20.6%(7) = 30분 이내 20.6%(7) > 3시간 이상 8.8%(3)</span></p>
+<p style="margin:4px 0;padding:8px 12px;background:#fff3e0;border-radius:4px;font-size:13px">exemONE·AI Tuner의 원인 파악 시간 단축 효과를 메시지로 활용 가능.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>4. AI 기능 수요</strong>
+<p style="margin:4px 0;font-size:13px"><strong>AI 자동 튜닝 활용 의향:</strong> 참고 수준 활용 61.8%(21) + 적극 활용 38.2%(13) = <strong>현업 활용 의향 100%</strong> (신뢰 어려움 0명)</p>
+<p style="margin:8px 0 4px;font-size:13px"><strong>가장 기대하는 AI 기능(복수):</strong></p>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">SQL 성능 자동 분석 및 튜닝 가이드 — <strong>82.4%</strong>(28명)</li>
+<li style="margin:4px 0">AI 이상탐지 및 장애 자동 알림 — <strong>47.1%</strong>(16명)</li>
+<li style="margin:4px 0">폐쇄망 지원 사내 지식 기반 AI 업무 비서 — <strong>41.2%</strong>(14명)</li>
+<li style="margin:4px 0">근본 원인 분석 자동화(RCA) — <strong>38.2%</strong>(13명)</li>
+</ul>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">SQL 자동 튜닝 가이드 수요가 82.4%로 최다 — AI Tuner 직접 수요. 폐쇄망 AI 비서 수요 41.2%는 금융·공공 보안망 고객 니즈로 eXemble 연계 가능.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>5. 세션 평가</strong>
+<p style="margin:4px 0;font-size:13px"><strong>가장 인상 깊었던 세션(복수):</strong><br>
+<span style="color:#666">Session 2. Foundry Local 활용법 41.2%(14) = 전체적으로 유익 41.2%(14) > Session 3. Copilot으로 해결하는 SQL Server 38.2%(13) > Session 1. Copilot 채팅 활용 가이드 26.5%(9)</span></p>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">로컬 환경에서 직접 AI를 돌리는 'Foundry Local 활용법'이 최고 선호. 폐쇄망·온프레미스 중심 참석자(52.9%) 특성과 일치.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>6. 참석자 피드백</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#e8f5e9;text-align:left;font-size:13px">긍정 반응</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실 사례 기반으로 Copilot 튜닝 적용법을 상세히 전달한 실전 사례 중심 구성 (다수)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">"AI를 잘 몰라도 쉽게 전달", "구성이 깔끔해 이해가 쉬움" 등 입문자 친화적 구성 (다수)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">"타 AI 튜닝 솔루션 대비 비용 측면에서 자체 도입·테스트 가능해 보임" 등 자체 적용 가능성에 대한 긍정 평가</td></tr>
+</table>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#fff3e0;text-align:left;font-size:13px">개선 요청 및 대응 방향</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실시간 세션 가독성 아쉬움, 데모 환경 실습 희망(4건) → 데모 예시 단순화 및 체험 세션 도입 검토 (실습 희망자 대상 SQL 파일 제공 등)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">사례 난이도 의견 갈림(더 복잡한 케이스 희망 vs 적합) → 입문·심화 레벨 구분 검토</td></tr>
+</table>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>7. 솔루션 후속 요청 현황</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">요청 유형</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">응답 수</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">비율</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">exemONE·eXemble 소개 자료 요청</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>10명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">29.4%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">데모 시연 요청</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>3명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">8.8%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">컨설팅 요청</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>1명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">2.9%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">필요 없음</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">20명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">58.8%</td></tr>
+</table>
+<p style="margin:4px 0;padding:8px 12px;background:#fff3e0;border-radius:4px;font-size:13px">후속 컨택 대상 <strong>14명</strong>의 개별 명단·기업명·진행 현황은 영업 컨택 관리 구글 시트에서 관리. 영업본부 후속 컨택 진행 상황을 시트에 업데이트 요청.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>8. 경영진 피드백 &amp; 전략 시사점</strong>
+<p style="margin:4px 0;font-size:13px;color:#555">결과 공유 메일에 대해 영업본부 강대일 상무, 연사로 참여한 DB성능마스터팀 김성식 이사가 회신한 의견을 정리. 설문에서 확인된 AI 기능 수요와 직접 연결되는 내용이다.</p>
+
+<div style="border:1px solid #d0d7de;border-radius:6px;padding:10px 14px;margin:8px 0;background:#fafbfc">
+<p style="margin:0 0 4px;font-size:13px"><strong>강대일 상무 (영업본부)</strong></p>
+<ul style="padding-left:20px;margin:4px 0;font-size:13px">
+<li style="margin:3px 0">설문에 나타난 고객 관심사가 영업본부가 현장에서 파악한 시장 흐름과 거의 일치. AI 적용에 대한 관심이 매우 높음.</li>
+<li style="margin:3px 0">1차 적용 검토 영역은 <strong>이상탐지·장애분석에 AI 도입</strong> 의지가 강하며, AI 자동 장애처리(오토튠)는 후순위 반응.</li>
+<li style="margin:3px 0">고객 최대 관심은 ①AI 이상탐지·장애알림 ②근본 원인 분석 자동화 ③SQL 자동 분석·튜닝. 관련 제품을 준비 중인 만큼 모니터링하며 고객 컨택 진행 예정.</li>
+<li style="margin:3px 0"><strong>한계 지적:</strong> ①②가 주력 제품인 MaxGauge·InterMax가 아니라 exemONE 모니터링 데이터 기반으로 준비되고 있어, exemONE의 시장 점유율을 고려하면 작은 시장을 대상으로 AI 기능을 제안해야 하는 현실적 어려움이 있음.</li>
+<li style="margin:3px 0"><strong>제언:</strong> MaxGauge·InterMax 데이터를 AI 기능에 어떻게 활용할지에 대한 고민이 반드시 필요.</li>
+</ul>
+</div>
+
+<div style="border:1px solid #d0d7de;border-radius:6px;padding:10px 14px;margin:8px 0;background:#fafbfc">
+<p style="margin:0 0 4px;font-size:13px"><strong>김성식 이사 (DB성능마스터팀 · 연사)</strong></p>
+<ul style="padding-left:20px;margin:4px 0;font-size:13px">
+<li style="margin:3px 0">AI를 활용해 필요한 솔루션을 자체 개발 중이며, GPU 서버를 활용한 다양한 시도를 진행 중.</li>
+<li style="margin:3px 0"><strong>AI 이상탐지 기능은 각 솔루션 영역별 필수 요소</strong>로 판단.</li>
+<li style="margin:3px 0">MaxGauge·InterMax 제품별 이상탐지 기능은 필수이며, 빠른 업데이트가 되지 않으면 경쟁력 확보가 어려울 수 있음.</li>
+<li style="margin:3px 0">"시간이 많지 않다"는 점을 강하게 체감.</li>
+</ul>
+</div>
+
+<p style="margin:8px 0 4px;font-size:13px"><strong>교차 해석 — 설문 ↔ 영업 ↔ 기술</strong></p>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">설문에서 확인된 <strong>AI 이상탐지·장애 알림(47.1%)</strong>과 <strong>RCA(38.2%)</strong> 수요가, 영업본부(강대일 상무)와 기술 리더(김성식 이사) 의견과 정확히 일치한다. 세 축이 공통으로 가리키는 결론은 <strong>제품별(MaxGauge·InterMax) AI 이상탐지 기능 강화의 시급성</strong>이다.</p>
+<p style="margin:4px 0;padding:8px 12px;background:#fff3e0;border-radius:4px;font-size:13px"><strong>마케팅 관점 시사점:</strong> 현재 AI 메시지는 exemONE 통합 레이어 중심이나, 시장 수요는 운영 비중이 높은 개별 제품(MaxGauge·InterMax) 단위의 AI 이상탐지에 몰려 있다. 향후 콘텐츠·캠페인에서 'exemONE 통합 AI' 메시지와 '제품별 AI 이상탐지' 메시지의 정합성을 검토하고, 제품 로드맵 확정 시 BOFU 콘텐츠로 빠르게 연결할 필요가 있다.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>9. 행사 후 콘텐츠 배포 현황</strong>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">세미나 성료 기사 송출 완료 (ES본부 김태혁 차장)</li>
+<li style="margin:4px 0">참석자 45명 대상 Thanks Letter 발송 완료 (발표자료·신간 도서 콘텐츠 링크 포함)</li>
+<li style="margin:4px 0">엑셈 링크드인 성료 콘텐츠 배포 완료</li>
+<li style="margin:4px 0">세미나 후속 블로그 콘텐츠 배포 예정 (7/1)</li>
+</ul>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>10. 다음 세미나 예고</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">일시</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">주제</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">2026-09-03 (목)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">Oracle SQL Tuning 세미나</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">2026-11-05 (목)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">PostgreSQL 세미나</td></tr>
+</table>
+<p style="margin:4px 0;font-size:13px;color:#666">행사 일정에 맞춰 한 달 전 홈페이지 홍보 페이지를 오픈하고, 영업대표 대상 고객 개별 초청 안내 자료를 사전 공유 예정.</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<div style="font-size:12px;color:#999;margin-top:12px">브랜드마케팅팀 마케팅 인사이트 · 원본: 임수현 결과보고 메일 (2026-06-26) · 강대일 상무 회신 (2026-06-27) · 김성식 이사 회신 (2026-06-29)</div>
+</body>
+</html>
