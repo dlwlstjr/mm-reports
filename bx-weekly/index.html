@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BX 주간 브리핑 · 2026년 7월 1주차</title>
+<title>BX 주간 브리핑 · 2026년 7월 2주차</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 /* BX 주간 통합 HTML — 2026-04-19 리뉴얼 (reports/calendar/index.html 디자인 언어 이식).
@@ -1022,8 +1022,8 @@ body.present .gantt { grid-auto-rows: 56px; }
     <div class="page-header-row">
       <div>
         <div class="section-prefix">BX WEEKLY</div>
-        <h1 class="page-title">2026년 7월 1주차</h1>
-        <div class="page-meta">2026-06-29 ~ 2026-07-05 · 갱신 2026-07-05</div>
+        <h1 class="page-title">2026년 7월 2주차</h1>
+        <div class="page-meta">2026-07-06 ~ 2026-07-12 · 갱신 2026-07-12</div>
       </div>
       <div class="mode-toggle" role="tablist" aria-label="화면 모드">
         <button type="button" data-mode="review" class="active">리뷰</button>
@@ -1033,19 +1033,19 @@ body.present .gantt { grid-auto-rows: 56px; }
     <div class="summary-kpis">
       <div class="kpi-box">
         <div class="kpi-label">이번 주 작업</div>
-        <div class="kpi-value">4</div>
+        <div class="kpi-value">3</div>
       </div>
       <div class="kpi-box">
         <div class="kpi-label">이번 주 마감</div>
-        <div class="kpi-value">5</div>
+        <div class="kpi-value">4</div>
       </div>
       <div class="kpi-box alert">
         <div class="kpi-label">막힘</div>
-        <div class="kpi-value">4</div>
+        <div class="kpi-value">2</div>
       </div>
       <div class="kpi-box success">
         <div class="kpi-label">지난주 완료</div>
-        <div class="kpi-value">3</div>
+        <div class="kpi-value">1</div>
       </div>
     </div>
   </header>
@@ -1062,40 +1062,40 @@ body.present .gantt { grid-auto-rows: 56px; }
       <article class="pulse-card"
                data-person="이진석"
                data-role="marketer"
-               data-blocked="false">
+               data-blocked="true">
         <header class="pulse-card-header" role="button" tabindex="0" aria-expanded="true">
           <div class="pc-identity">
             <span class="pc-name">이진석</span>
             <span class="pc-role">마케터</span>
           </div>
           <div class="pc-stats">
-            <span class="pc-stat"><strong>1</strong>이번주</span>
-            <span class="pc-stat pc-stat-blocked "><strong>0</strong>막힘</span>
+            <span class="pc-stat"><strong>0</strong>이번주</span>
+            <span class="pc-stat pc-stat-blocked alert"><strong>1</strong>막힘</span>
             <span class="pc-toggle" aria-hidden="true">▾</span>
           </div>
         </header>
         <div class="pulse-card-body">
           <div class="pc-section last-week">
             <h4>지난주 한 일</h4>
-            <pre>✅ 싱글스토어 블로그 콘텐츠 - 1건 기획
-✅ 재무회계팀 AI 업무 협업 - 2회 미팅
-✅ 온토맥스 상세페이지 기획 (피드백 진행)
-✅ 도서 출판 최종 완료 (유통/납본 확인)
-✅ 회사 브로슈어 기획 (계속)</pre>
+            <pre>✅ 회사 브로슈어 기획 (계속)
+✅ 싱글스토어 데모 영상 녹화 &amp; 기획
+✅ 싱글스토어 블로그 콘텐츠 기획
+✅ 재무회계팀 AI 업무 협업 미팅
+✅ 솔루션맵 업데이트 (신제품 2개 추가)
+✅ 맥스게이지 for HANA 브로슈어 기획</pre>
           </div>
           <div class="pc-section this-week">
             <h4>이번 주 할 일</h4>
-            <ul>
-              <li>
-                <span class="pj-dot" style="background: #B8896B;"></span>
-                <span class="tw-title">SingleStore 콘텐츠</span>
-                <span class="tw-meta">07/10 · 진행 중</span>
-              </li>
-            </ul>
+            <div class="empty">이번 주 작업 없음</div>
           </div>
           <div class="pc-section blocked">
             <h4>막힘 (지연 + 선행 의존)</h4>
-            <div class="empty">막힌 작업 없음</div>
+            <ul>
+              <li>
+                <span class="bl-title">SingleStore 콘텐츠</span>
+                <span class="bl-meta">마감 07/10 지남, 상태 &#39;진행 중&#39;</span>
+              </li>
+            </ul>
           </div>
         </div>
       </article>
@@ -1110,7 +1110,7 @@ body.present .gantt { grid-auto-rows: 56px; }
           </div>
           <div class="pc-stats">
             <span class="pc-stat"><strong>2</strong>이번주</span>
-            <span class="pc-stat pc-stat-blocked alert"><strong>4</strong>막힘</span>
+            <span class="pc-stat pc-stat-blocked alert"><strong>1</strong>막힘</span>
             <span class="pc-toggle" aria-hidden="true">▾</span>
           </div>
         </header>
@@ -1118,67 +1118,122 @@ body.present .gantt { grid-auto-rows: 56px; }
           <div class="pc-section last-week">
             <h4>지난주 한 일</h4>
             <pre>📌 6월 내부 세미나
-만족도 조사 설문 기획 → 왈라폼 세팅 완료, 만족도조사 QR 생성
-발표 PPT 세팅 공유  완료 (세션1,2 + 오프닝 클로징 포함)
-만족도 조사 제공용 pdf 세팅 공유 완료
-발표자료 PDF 공유 링크: https://drive.google.com/file/d/1ED47nMBTlOc8sbb5NHX9X5SvXjzsAYWE/view?usp=drive_link
-만족도 조사 링크: https://walla.my/a/MSSQL0625
-리허설 일정 및 모니터 세팅법 MM 공유 / 영상 녹화 테스트 완료 (w. 발표자 병찬님)
-SQL 세미나 관련 블로그 - 기획 계속
-제목 확정: AI 활용 SQL 튜닝 세미나에서 제시한, DB 운영 자동화의 2가지 방향
-📌 SNS - 링크드인, 인스타그램
-[링크드인] MaxGauge의 데이터를 한 장의 리포트로
-[인스타그램] MaxGauge의 데이터를 한 장의 리포트로
-[링크드인] AI에게 SQL 튜닝 맡겨도 될까: GitHub Copilot 채팅 활용 사례 67 (예약 발행)
-📌 성과 리포트
-[오프라인 행사 성과 리포트] 
-→ 피드백 반영 고도화  🔗리포트 링크
-[링크드인/인스타그램 성과 리포트] 
-→ 초안 공유 🔗리포트 링크
-📌 기타
-온라인 콘텐츠 성과 리포트(유진님) 피드백 전달
-성과 리포트 내 탭별 주요 수치가 한눈에 보여 성과를 파악하기 좋네요! 
-다만 유진님께서 설계하신 월별 콘텐츠 기획 의도와 전략이 보강되면 설득적인 보고자료가 될 것 같아 아래와 같이 피드백 드립니다 
-1) 기획 의도 → 성과 코멘트 추가 (모든 탭 공통)
-현재 뉴스레터 주제와 월별 블로그 콘텐츠 주제를 기획해서 발행하는 것으로 알고 있는데, 이부분을 탭별로 간략하게 추가해주시면 좋을 것 같습니다.
-2) 인사이트 코멘트 → 임원 보고용 톤 전환
-지금 작성된 인사이트 코멘트는 AI 피드백처럼 보여서 임원 보고용으로 톤을 변경하면 좋을 것 같습니다. +수치적으로 지난달보다 조금 성과가 개선된 부분이 있다면, &#34;결과 → 시사점 → 다음 액션&#34;흐름으로 변경하면 어떨지 제안드려봅니다!
-3) 블로그 탭
--방문수: 커서를 올리지 않아도 그래프에 상시 표기되면 추이 파악이 더 쉬울 것 같습니다. 
--&#39;최근 2주&#39; 기준: 월별이 아닌, 최근 2주로 기간을 선정 이유를 1~2줄 설명해주시면 좋을 것 같습니다.
--검색 유입 키워드 Top 10 표 삭제:  Top10 유입 검색어가 대부분 조회수 1위 콘텐츠(&#34;QA도, 시간도 없던 팀이 AI Agent로  테스트 자동화를 정착시킨 방법&#34;) 유입 키워드로 중복되어서 해당 표를 삭제하고, &#39;조회수 기준 Top10 콘텐츠&#39; 표 내에 지표로 추가하면 어떨까요? +비워진 표에는  월별 신규 업로드 콘텐츠별 조회수 / 노출 키워드 표로 대체하여 신규 콘텐츠 동향을 보여주면 좋을 것 같습니다.
-4) 뉴스레터 탭
--수신거부 등 민감 지표 설명 1~2줄:  5월 AWS Summit에서 확보한 광고성 수신동의 DB의 이탈 가능성 등 배경을 1~2줄 달면,임원진이 바로 공감하고 넘어갈 수 있을 것 같습니다. 
--하단의 월별 지표는 그래프보다 표 형태가 비교에 더 직관적일 것 같습니다.
-📌 6월 내부 세미나
-[행사 전] 주차 신청 당첨자 설문 문자 발송, 차량 번호 취합 Works 등록 (운영 관리팀 메일 공유)
+행사 전 준비 리스트 (완료)
 [행사 전] 행사 오프닝, 클로징, 이벤트 진행 안내 멘트
-[행사 전] 현장 물품 주문 (펜, 다과, 물, 도서 고정대)
+[행사 전] 주차 신청 당첨자 설문 문자 발송, 차량 번호 취합 Works 등록(6대)
+[행사 전] 현장 물품 주문 (A4 가로형 POP, 펜, 다과, 물, 도서 고정대)
 [행사 전] 세션3 발표자료 수령 (~6/22), 발표자료 최종본 세팅 및 만족도 조사 제공용 pdf 공유본 완료
 [행사 전] 영업 현장지원 담당자 요청 및 운영진 안내
 [행사 전 D-1] D-1, D-day 문자 예약 발송
-[행사 전 D-1] 세미나실 세팅 및 리허설 (녹화, 이벤트 세팅 최종), 당일 행사 진행
-[행사 종료 D+1] 결과 보고 메일 영업 공유
-[행사 종료 D+1] Thanks Letter 발송
+[행사 전 D-1] 세미나실 세팅 및 리허설 (녹화, 이벤트 명단 세팅 최종)
+[행사 D-day] 당일 행사 진행 
+→ 사전 신청: 63명 (참석 확정 45명 / 미응답 13명 / 참석불가 5명
+→ 최종 참석: 45명 (참석불가 5명 제외 58명 기준, 참석률 약 78%)
+→ 만족도 조사 34명(응답률 75.6%)
+[행사 종료 D+1] Thanks Letter 발송 (오후 2시)
+ → 참석자 45명 대상 발송, 발송 성공 43명(95.6%), 오픈율 22명(51.2%), 클릭률 11명(25.6%)
+[행사 종료 D+1] 결과 보고 메일 영업 공유 완료
+6월 25일(목) 진행된 「2026 AI 활용 MS SQL Server Tuning 기술 세미나」 결과 공유드립니다.
+2026년도 두 번째 기술 세미나로, 발표를 맡아주신 DB성능마스터팀 김성식 이사님·이병찬 컨설턴트님과 고객 초청에 힘써주신 영업대표님들께 감사드립니다.
+이번 세미나는 ‘AI 활용’을 전면에 내세운 첫 세미나로, 신간 『GitHub Copilot Chat과 함께하는 SQL 튜닝 가이드』와 연계해 차별화된 구성으로 진행되었으며, 만족도 조사 응답자 전원이 7점 이상 (평균 8.47점) 으로 응답하며 세미나 콘텐츠에 대한 만족도가 높았습니다. 또한 참석자가 인식하는 주요 IT 운영 과제와 AI 기능 수요가 exemONE·AI Tuner 기능과 높은 연계성을 보이는 점을 확인할 수 있었습니다.
+본 메일에는 사후 만족도 조사 결과를 기준으로 후속 컨택 대상 고객을 정리한 결과보고 파일을 첨부합니다.
+※ 4번 내용으로 솔루션 관련 요청 고객에 대한 영업 후속 컨택 진행 현황 공유 요청 확인 부탁드립니다.
+1. 주요 요약
+-사전 신청자 수: 63명 (참석 확정 45명 / 미응답 13명 / 참석 불가 5명)
+-실제 참석자 수: 45명 (참석 불가 5명 제외 58명 기준, 참석률 약 78%)
+-만족도 조사 응답 수: 34명 (응답률 75.6%)
+-평균 만족도: 8.47점 / 10점 만점
+-NPS 지수: 44.1 (3월 세미나 NPS 지수 43.5 → 6월 44.1로 상승) 
+   → 응답자 전원이 7점 이상(만족) 부여 및 44.1%가 적극 추천(9~10점), B2B 평균 20~30 대비 높은 수치
+   ※ NPS: 추천 의향(0~10점)으로 고객 충성도를 보는 지표
+-영업 후속 컨택 요청 고객: 14명
+2. 실제 참석자 분류 (45명)
+-산업군: IT/소프트웨어 53.3%(24명) &gt; 금융 24.4%(11명) &gt; 제조 6.7%(3명) &gt; 공공기관 4.4% (2명) &gt; 외 기타
+-주요 업무 영역(복수): DBA/DB 운영 88.9%(40명) &gt; IT 인프라 운영 33.3%(15명) &gt; 시스템·백엔드 개발 13.3%(6명)
+-SQL 튜닝 경험: 실무 경험 있음 40.0%(18명) = 기본 개념 보유 40.0%(18명) &gt; 튜닝 주담당 13.3%(6명) &gt; 처음 배우는 단계 6.7%(3명)
+→ 참석자의 90%가  DBA/DB 운영 직무, 80%가 실무 경험·기본 개념 보유 단계로 &#39;실전 사례 기반 튜닝 노하우&#39; 니즈가 높은 핵심 운영층 중심
+3. 만족도 설문 결과 요약
+첨부된 엑셀 파일 내 ‘설문 결과’ 탭에서 전체 설문결과 요약값 확인 가능합니다. 메일 본문에는 설문 주요 내용 요약하여 공유드립니다.
+3-1. 응답자 프로필 (34명)
+-직책: 시니어 실무자 55.9%(19명) &gt; 주니어 실무자 38.2%(13명) &gt; 관리자 5.9%(2명)
+-산업군: IT/소프트웨어 52.9%(18명) &gt; 금융 23.5%(8명) &gt; 제조 5.9%(2명) &gt; 공공기관 5.9%(2명) &gt; 외 기타
+-주요 업무 영역(복수): DBA/DB 운영 85.3%(29명) &gt; IT 인프라 운영 35.3%(12명) &gt; 시스템·백엔드 개발 14.7%(5명)
+→ 실제 참석자(45명)와 거의 동일하게 DBA/DB 운영·실무 경험층이 만족도 조사에 참여해, 설문 결과가 참석자 전체를 대표함
+-SQL 튜닝 경험: 실무 경험 있음 44.1%(15명) &gt; 기본 개념 보유 41.2%(14명) &gt; 튜닝 주담당 8.8%(3명) &gt; 처음 배우는 단계 5.9%(2명)
+-주력 운영 DB: Oracle 44.1%(15명) &gt; MS SQL Server 29.4%(10명) &gt; MySQL 14.7%(5명) &gt; PostgreSQL·MariaDB 등
+→ MS SQL 주제임에도 Oracle DB 주력 운영사가 최다 참석
+3-2. IT 운영 환경 및 과제
+-운영 환경: 온프레미스 중심 52.9%(18명) &gt; 하이브리드 38.2%(13명)
+-주요 과제: 장애 감지 및 원인 파악 61.8%(21명) = 성능 저하·병목 개선 61.8%(21명) &gt; 통합 모니터링 구축 44.1%(15명) &gt; AI·자동화 도입 38.2%(13명)
+→ 상위 과제 모두 exemONE 핵심 기능과 직접 연계
+-성능 이슈 원인 파악 평균 소요 시간(MTTD): 30분~1시간 50.0%(17명) &gt; 1시간~3시간·30분 이내 각 20.6%(7명) &gt; 3시간 이상 8.8%(3명)
+→ 전체의 79.4%가 원인 파악에 30분 이상 소요, exemONE·AI Tuner 도입 효과 메시지로 활용 가능
+3-3. AI 기능 수요
+-AI 자동 튜닝 활용 의향: 참고 수준 활용 61.8%(21명) &gt; 적극 활용 38.2%(13명) 
+-기대 AI 기능(복수): SQL 성능 자동 분석·튜닝 가이드 82.4%(28명) &gt; AI 이상탐지·장애 자동 알림 47.1%(16명) &gt; 폐쇄망 지원 사내 지식 AI 비서 41.2%(14명) &gt; 근본 원인 분석 자동화(RCA) 38.2%(13명)
+→ SQL 자동 튜닝 가이드 수요 82%로 최다 (AI Tuner 직접 수요)/  폐쇄망 AI 기능 수요 41% (금융·공공 보안망 고객 니즈)
+3-4. 만족도 및 세션 평가
+-NPS 분포: 적극 추천(9~10점) 44.1%(15명) &gt; 만족(7~8점) 55.9%(19명) 
+-세션별 선호도(복수): 전체적으로 유익 41.2%(14명) = Session 2 Foundry Local 활용법 41.2%(14명) &gt; Session 3 Copilot 기반 SQL Server 38.2%(13명) &gt; Session 1 Copilot 기초 26.5%(9명)
+3-5. 참석자 주요 피드백 및 추후 운영 개선 방안
+[ 긍정 반응 ]
+1) 실 사례 기반으로 Copilot 튜닝 적용법을 상세히 전달한 실전 사례 중심 구성 (다수)
+2) &#34;AI를 잘 몰라도 쉽게 전달&#34;, &#34;구성이 깔끔해 이해가 쉬움&#34; 등 입문자 친화적 구성 (다수)
+3) &#34;타 AI 튜닝 솔루션 대비 비용 측면에서 자체 도입·테스트 가능해 보임&#34; 등 자체 적용 가능성에 대한 긍정 평가
+[ 개선 요청 및 대응 방향 ]
+1) 실사례 세션 가독성 아쉬움, 데모 환경 실습 희망 (4건) → 데모 예시 단순화 및 체험 세션 도입 검토(데모 실습을 희망하는 사람들에게 SQL 파일 제공 등) 
+2)사례 난이도 의견이 갈림(더 복잡한 케이스 희망 vs 적합)→ 입문·심화 레벨 구분 검토
+4. 행사 후 콘텐츠 배포 현황
+1)세미나 성료 기사 송출 완료 (링크) → ES본부 김태혁 차장님께서 기사 작성 및 배포 진행해주셨습니다. 감사합니다! 
+2)참석자 45명 대상 Thanks Letter 발송 완료 (링크) → 발표자료·신간 도서 콘텐츠 링크 포함
+3)엑셈 링크드인 성료 콘텐츠 배포 (링크)
+4)세미나 후속 블로그 콘텐츠 배포 예정 (7/1)
+5. 영업 대응 관련 요청 사항
+만족도 응답자 34명 중 14명(41.2%)이 후속 자료·데모를 요청했습니다.
+exemONE·eXemble 소개 자료 요청: 10명
+데모 시연 요청: 3명
+컨설팅 요청: 1명
+해당 명단은 첨부파일 및 구글 스프레드시트에서 확인 가능하며, 영업 컨택 진행 현황을 시트에 메모 형식으로 업데이트 부탁드립니다
+[영업 컨택 현황 구글 시트 링크] : https://docs.google.com/spreadsheets/d/1tb-shNdFvLVwMJ_axsKrjuqXZjdGz1Hi5oft917gv7o/edit?usp=sharing
+기재 예시
+1) 영업 컨택 여부: 컨택 완료 / 컨택 예정 / 컨택 불가 등 상태 변경 
+2) 비고: ex) 4/3 미팅 예정 / 제품소개서만 전달 요청하여 메일 발송 완료 등
+행사별 ROI 정리 및 차기 목표 산정에 참고 예정이오니, 공유 가능한 진행 상황은 편하게 업데이트 부탁드립니다. 영업 컨택 관련 차주 다시 메일로 현황 공유 요청드리겠습니다.
+다음 세미나는 9월 3일(목) Oracle SQL Tuning 세미나, 11월 5일(목) PostgreSQL 세미나가 예정되어 있습니다. 일정에 맞춰 한 달 전 홈페이지 홍보 페이지를 오픈하고, 영업대표님들께서 고객에게 개별 초청을 진행하실 수 있도록 안내 자료를 사전 공유드리겠습니다.
+감사합니다.
+임수현 드림.
 📌 블로그
-SQL 세미나 관련 블로그 - 작성 완료, 검수 및 디자인 요청 예정
+SQL 세미나 관련 블로그 - 작성 완료, 검수 및 디자인 요청 (~6/30)
 📌 SNS - 링크드인, 인스타그램
 [링크드인] AI 에이전트가 IT 운영을 어디까지 자동화하고 있나
 [링크드인] SQL 세미나 성료 (링크: 배포 기사 기반)
-[인스타그램] SQL 세미나 성료 (링크: 배포 기사 기반)</pre>
+📌 6월 내부 세미나
+사후 품의 상신
+[블로그] SQL Server 세미나 관련 콘텐츠 업로드 (7/1) , 본문 이미지 완료
+📌 7월 7일 싱글스토어 외부 행사
+행사 기획 인수인계
+행사 운영진 대상 안내 (메일 및 대면)
+📌 SNS - 링크드인, 인스타그램
+[링크드인] 통합 모니터링 플랫폼 도입 시 IT 운영팀이 비교해야 할 기준
+[인스타그램] SQL 세미나 성료 (링크: 배포 기사 기반)
+[링크드인] 쿠버네티스 모니터링 실무: 놓치기 쉬운 메트릭 체크리스트
+📌 기타
+링크드인/인스타그램 성과 리포트 (온라인 리포트 수치 기준 맞추기 등 업데이트 계속) 🔗리포트 링크
+오프라인 행사 성과 리포트 - 6월 세미나 추가 업데이트 🔗리포트 링크
+보도자료 - 책 제목 교체 가능 파악하기 @임수현 → 김태혁 차장님</pre>
           </div>
           <div class="pc-section this-week">
             <h4>이번 주 할 일</h4>
             <ul>
               <li>
-                <span class="pj-dot" style="background: #8B8580;"></span>
-                <span class="tw-title">행사 운영 (SingleStore AI NOW in SEOUL)</span>
-                <span class="tw-meta">07/07 · 시작 전</span>
+                <span class="pj-dot" style="background: #8B6B9E;"></span>
+                <span class="tw-title">[인스타그램] AI에게 SQL 튜닝 맡겨도 될까: GitHub Copilot 채팅 활용 사례 67</span>
+                <span class="tw-meta">07/13 · 진행 중</span>
               </li>
               <li>
-                <span class="pj-dot" style="background: #8B8580;"></span>
-                <span class="tw-title">행사 결과 보고</span>
-                <span class="tw-meta">07/10 · 시작 전</span>
+                <span class="pj-dot" style="background: #8B6B9E;"></span>
+                <span class="tw-title">[링크드인] SingleStore 콘텐츠</span>
+                <span class="tw-meta">07/15 · 시작 전</span>
               </li>
             </ul>
           </div>
@@ -1186,20 +1241,8 @@ SQL 세미나 관련 블로그 - 작성 완료, 검수 및 디자인 요청 예�
             <h4>막힘 (지연 + 선행 의존)</h4>
             <ul>
               <li>
-                <span class="bl-title">행사 전  운영진 공지</span>
-                <span class="bl-meta">마감 07/03 지남, 상태 &#39;진행 중&#39;</span>
-              </li>
-              <li>
-                <span class="bl-title">[링크드인] 쿠버네티스 모니터링 실무: 놓치기 쉬운 메트릭 체크리스트</span>
-                <span class="bl-meta">마감 07/03 지남, 상태 &#39;시작 전&#39;</span>
-              </li>
-              <li>
-                <span class="bl-title">[3. 사후 관리] 사후 콘텐츠 (블로그 등)</span>
-                <span class="bl-meta">마감 07/03 지남, 상태 &#39;진행 중&#39;</span>
-              </li>
-              <li>
-                <span class="bl-title">사후 관리</span>
-                <span class="bl-meta">마감 07/03 지남, 상태 &#39;보관&#39;</span>
+                <span class="bl-title">[링크드인] 바이브 코딩에 하네스를 채우다: Design Studio</span>
+                <span class="bl-meta">마감 07/09 지남, 상태 &#39;진행 중&#39;</span>
               </li>
             </ul>
           </div>
@@ -1223,15 +1266,17 @@ SQL 세미나 관련 블로그 - 작성 완료, 검수 및 디자인 요청 예�
         <div class="pulse-card-body">
           <div class="pc-section last-week">
             <h4>지난주 한 일</h4>
-            <div class="empty">지난주 회의록 본문 없음</div>
+            <pre>지난주
+이번주
+📌 https://walla.my/v/S0Vn7nryZv1OPNYQIIET</pre>
           </div>
           <div class="pc-section this-week">
             <h4>이번 주 할 일</h4>
             <ul>
               <li>
                 <span class="pj-dot" style="background: #B8896B;"></span>
-                <span class="tw-title">리눅스 커널 취약점이 DB 서버를 무너뜨리는 방법</span>
-                <span class="tw-meta">07/08 · 진행 중</span>
+                <span class="tw-title">SLO로 운영하는 팀은 무엇이 다른가</span>
+                <span class="tw-meta">07/15 · 진행 중</span>
               </li>
             </ul>
           </div>
@@ -1294,7 +1339,9 @@ BD팀 원온원 : 6/18 (목) 오후 4시</pre>
         <div class="pulse-card-body">
           <div class="pc-section last-week">
             <h4>지난주 한 일</h4>
-            <div class="empty">지난주 회의록 본문 없음</div>
+            <pre>*완료 🔵  /  진행중 🟢  /  홀드 및 대기 🟡 /  드랍 🔴
+지난주
+이번주</pre>
           </div>
           <div class="pc-section this-week">
             <h4>이번 주 할 일</h4>
@@ -1458,58 +1505,68 @@ BD팀 원온원 : 6/18 (목) 오후 4시</pre>
         <div class="gantt-day   "
              style="grid-column: 2;">
           <span class="gantt-day-label">월</span>
-          <span class="gantt-day-date">29</span>
+          <span class="gantt-day-date">6</span>
         </div>
         <div class="gantt-day   "
              style="grid-column: 3;">
           <span class="gantt-day-label">화</span>
-          <span class="gantt-day-date">30</span>
+          <span class="gantt-day-date">7</span>
         </div>
         <div class="gantt-day   "
              style="grid-column: 4;">
           <span class="gantt-day-label">수</span>
-          <span class="gantt-day-date">1</span>
+          <span class="gantt-day-date">8</span>
         </div>
         <div class="gantt-day   "
              style="grid-column: 5;">
           <span class="gantt-day-label">목</span>
-          <span class="gantt-day-date">2</span>
+          <span class="gantt-day-date">9</span>
         </div>
         <div class="gantt-day   "
              style="grid-column: 6;">
           <span class="gantt-day-label">금</span>
-          <span class="gantt-day-date">3</span>
+          <span class="gantt-day-date">10</span>
         </div>
         <div class="gantt-day  weekend "
              style="grid-column: 7;">
           <span class="gantt-day-label">토</span>
-          <span class="gantt-day-date">4</span>
+          <span class="gantt-day-date">11</span>
         </div>
         <div class="gantt-day today weekend "
              style="grid-column: 8;">
           <span class="gantt-day-label">일</span>
-          <span class="gantt-day-date">5</span>
+          <span class="gantt-day-date">12</span>
         </div>
         <div class="gantt-day   next-week"
              style="grid-column: 9;">
           <span class="gantt-day-label">월</span>
-          <span class="gantt-day-date">6</span>
+          <span class="gantt-day-date">13</span>
         </div>
         <div class="gantt-day   next-week"
              style="grid-column: 10;">
           <span class="gantt-day-label">화</span>
-          <span class="gantt-day-date">7</span>
+          <span class="gantt-day-date">14</span>
         </div>
         <div class="gantt-day   next-week"
              style="grid-column: 11;">
           <span class="gantt-day-label">수</span>
-          <span class="gantt-day-date">8</span>
+          <span class="gantt-day-date">15</span>
         </div>
       </div>
       <div class="gantt-row" data-person="이진석" style="grid-row: 2;">
         <div class="gantt-label">
           이진석
           <span class="role-dot role-marketer"></span>
+        </div>
+        <div class="gantt-bar"
+             data-task-id="382550b4-fd95-80ee-bb6d-fc241f6afe46"
+             data-person="이진석"
+             data-project="333550b4-fd95-8084-a37b-d1fad0cd0776"
+             data-predecessors=""
+             data-successors=""
+             style="grid-column: 6 / span 1; background: #B8896B;"
+             title="SingleStore 콘텐츠">
+          <span class="gantt-bar-title">SingleStore 콘텐츠</span>
         </div>
       </div>
       <div class="gantt-row" data-person="임수현" style="grid-row: 3;">
@@ -1518,54 +1575,44 @@ BD팀 원온원 : 6/18 (목) 오후 4시</pre>
           <span class="role-dot role-marketer"></span>
         </div>
         <div class="gantt-bar"
-             data-task-id="38f550b4-fd95-8046-befa-d6d0f10f9670"
+             data-task-id="398550b4-fd95-8045-abb0-d9b5a630fdcb"
+             data-person="임수현"
+             data-project="335550b4-fd95-8009-88c8-e4b6bba0d988"
+             data-predecessors=""
+             data-successors=""
+             style="grid-column: 11 / span 1; background: #8B6B9E;"
+             title="[링크드인] SingleStore 콘텐츠">
+          <span class="gantt-bar-title">[링크드인] SingleStore 콘텐츠</span>
+        </div>
+        <div class="gantt-bar"
+             data-task-id="395550b4-fd95-80a3-92f7-d2689c54de63"
+             data-person="임수현"
+             data-project="335550b4-fd95-8009-88c8-e4b6bba0d988"
+             data-predecessors=""
+             data-successors=""
+             style="grid-column: 9 / span 1; background: #8B6B9E;"
+             title="[인스타그램] AI에게 SQL 튜닝 맡겨도 될까: GitHub Copilot 채팅 활용 사례 67">
+          <span class="gantt-bar-title">[인스타그램] AI에게 SQL 튜닝 맡겨도 될까: GitHub Copilot 채팅 활용 사례 67</span>
+        </div>
+        <div class="gantt-bar"
+             data-task-id="395550b4-fd95-808e-b4c1-d37ce3be32bc"
+             data-person="임수현"
+             data-project="335550b4-fd95-8009-88c8-e4b6bba0d988"
+             data-predecessors=""
+             data-successors=""
+             style="grid-column: 5 / span 1; background: #8B6B9E;"
+             title="[링크드인] 바이브 코딩에 하네스를 채우다: Design Studio">
+          <span class="gantt-bar-title">[링크드인] 바이브 코딩에 하네스를 채우다: Design Studio</span>
+        </div>
+        <div class="gantt-bar"
+             data-task-id="38f550b4-fd95-80b9-82f5-d51c101bc83a"
              data-person="임수현"
              data-project="367550b4-fd95-8083-be24-f55a43688107"
              data-predecessors=""
              data-successors=""
              style="grid-column: 6 / span 1; background: #8B8580;"
-             title="행사 전  운영진 공지">
-          <span class="gantt-bar-title">행사 전  운영진 공지</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="37c550b4-fd95-8071-94f8-c1b45e065215"
-             data-person="임수현"
-             data-project="335550b4-fd95-8009-88c8-e4b6bba0d988"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 6 / span 1; background: #8B6B9E;"
-             title="[링크드인] 쿠버네티스 모니터링 실무: 놓치기 쉬운 메트릭 체크리스트">
-          <span class="gantt-bar-title">[링크드인] 쿠버네티스 모니터링 실무: 놓치기 쉬운 메트릭 체크리스트</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="367550b4-fd95-8094-9c84-cc844773b3c1"
-             data-person="임수현"
-             data-project="367550b4-fd95-8083-be24-f55a43688107"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 10 / span 1; background: #8B8580;"
-             title="행사 운영 (SingleStore AI NOW in SEOUL)">
-          <span class="gantt-bar-title">행사 운영 (SingleStore AI NOW in SEOUL)</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="33a550b4-fd95-809c-a1c0-f77981d03205"
-             data-person="임수현"
-             data-project="332550b4-fd95-803d-a594-c360b916710b"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 6 / span 1; background: #9E6B75;"
-             title="[3. 사후 관리] 사후 콘텐츠 (블로그 등)">
-          <span class="gantt-bar-title">[3. 사후 관리] 사후 콘텐츠 (블로그 등)</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="33a550b4-fd95-8083-9cd9-d43859af76d6"
-             data-person="임수현"
-             data-project="332550b4-fd95-803d-a594-c360b916710b"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 6 / span 1; background: #9E6B75;"
-             title="사후 관리">
-          <span class="gantt-bar-title">사후 관리</span>
+             title="행사 결과 보고">
+          <span class="gantt-bar-title">행사 결과 보고</span>
         </div>
       </div>
       <div class="gantt-row" data-person="김유진" style="grid-row: 4;">
@@ -1574,34 +1621,14 @@ BD팀 원온원 : 6/18 (목) 오후 4시</pre>
           <span class="role-dot role-marketer"></span>
         </div>
         <div class="gantt-bar"
-             data-task-id="38b550b4-fd95-80b9-bf33-ceb0f9a11b70"
-             data-person="김유진"
-             data-project="333550b4-fd95-8084-a37b-d1fad0cd0776"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 6 / span 1; background: #B8896B;"
-             title="바이브 코딩에 하네스를 걸다: Design Studio">
-          <span class="gantt-bar-title">바이브 코딩에 하네스를 걸다: Design Studio</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="382550b4-fd95-80fd-81d1-ddd364983794"
+             data-task-id="384550b4-fd95-8042-b7c2-d60124421a11"
              data-person="김유진"
              data-project="333550b4-fd95-8084-a37b-d1fad0cd0776"
              data-predecessors=""
              data-successors=""
              style="grid-column: 11 / span 1; background: #B8896B;"
-             title="리눅스 커널 취약점이 DB 서버를 무너뜨리는 방법">
-          <span class="gantt-bar-title">리눅스 커널 취약점이 DB 서버를 무너뜨리는 방법</span>
-        </div>
-        <div class="gantt-bar"
-             data-task-id="33d550b4-fd95-8102-87c6-f508951951b7"
-             data-person="김유진"
-             data-project="33a550b4-fd95-80d0-998a-f3513d00454d"
-             data-predecessors=""
-             data-successors=""
-             style="grid-column: 6 / span 1; background: #5E7D91;"
-             title="원고 최종 확정 (검수 반영 + 교정)">
-          <span class="gantt-bar-title">원고 최종 확정 (검수 반영 + 교정)</span>
+             title="SLO로 운영하는 팀은 무엇이 다른가">
+          <span class="gantt-bar-title">SLO로 운영하는 팀은 무엇이 다른가</span>
         </div>
       </div>
       <div class="gantt-row" data-person="정진아" style="grid-row: 5;">
@@ -1627,7 +1654,7 @@ BD팀 원온원 : 6/18 (목) 오후 4시</pre>
   </section>
 
   <footer class="footer-links">
-<a href="https://www.notion.so/33d550b4fd9581aebefbe1f3cb5a51b4" target="_blank" rel="noopener">분기 OKR 페이지 ↗</a>    <span>· 갱신 2026-07-05</span>
+<a href="https://www.notion.so/33d550b4fd9581aebefbe1f3cb5a51b4" target="_blank" rel="noopener">분기 OKR 페이지 ↗</a>    <span>· 갱신 2026-07-12</span>
   </footer>
 
 
